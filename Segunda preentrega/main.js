@@ -51,8 +51,19 @@ if (compra) {
 }
 
 compra.stock -1;
-
+ 
 console.log (productos);
+
+const stockAct = productos.map (p => {
+    return {
+        id: p.id,
+        nombre: p.nombre,
+        precio: p.precio,
+        stock: p.stock - compra.stock,
+    }
+})
+
+console.log (stockAct);
 
 
 
