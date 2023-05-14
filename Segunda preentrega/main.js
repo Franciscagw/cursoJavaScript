@@ -39,6 +39,20 @@ console.log (
 );
 
 
+const productoNombre = prompt ("Ingrese el nombre del producto que desea comprar");
+
+const compra = productos.find (p => p.nombre ===productoNombre);
+
+if (compra) {
+    let mensaje = `id: ${compra.id}, nombre: ${compra.nombre}, precio: ${compra.precio},stock ${compra.stock}`;
+    alert(mensaje);
+} else {
+    alert("Producto no encontrado")
+}
+
+compra.stock -1;
+
+console.log (productos);
 
 
 
