@@ -1,4 +1,4 @@
-/*let nombre = prompt ("Ingrese su nombre");
+let nombre = prompt ("Ingrese su nombre");
 let apellido = prompt ("Ingrese su apellido")
 
 function nombreApellido (){
@@ -8,13 +8,6 @@ function nombreApellido (){
 if (nombreApellido()!= "") {alert (`Bienvenido ${nombreApellido()} a nuestra tienda online de indumentaria`);}
 else { alert ("Ingrese el nombre y el apellido")};
 
-
-/*function filtro (talle, seccion){
-    this.talle = talle;
-    this.seccion = seccion;
-}
-const persona1 = new filtro (16, "niños");
-console.log (persona1)*/
 
 
 const productos = [
@@ -46,6 +39,6 @@ console.log (
 );
 
 
-console.log (Date);
+
 
 
