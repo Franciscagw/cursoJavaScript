@@ -39,7 +39,8 @@ console.log (
 );
 
 
-const productoNombre = prompt ("Ingrese el nombre del producto que desea comprar");
+const productoNombre = prompt (`Ingrese el nombre del producto que desea comprar 
+${productos}`);
 
 const compra = productos.find (p => p.nombre ===productoNombre);
 
