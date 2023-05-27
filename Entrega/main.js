@@ -5,6 +5,17 @@ const productos = [
     {id:3, nombre: "CD Lounge Bag Blue Dior Oblique Jacquard",precio: 2600},
     {id:4, nombre: "Mini Lady Dior Bag",precio: 5100},
     {id:5, nombre: "Small 30 Montaige Bag",precio: 2900},
-    {id:6, nombre: "Small Dior Key Bag",precio: 4200}
+    {id:6, nombre: "Small Dior Key Bag",precio: 4200},
 ];
 
+let botonSelect = document.getElementById("select");
+
+
+botonSelect.addEventListener("click", ()=>{
+
+} );
+
+let mouseOver = document.getElementById("move");
+
+mouseOver.addEventListener("mouseover",() =>
+  );
