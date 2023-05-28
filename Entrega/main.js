@@ -8,14 +8,17 @@ const productos = [
     {id:6, nombre: "Small Dior Key Bag",precio: 4200},
 ];
 
-let botonSelect = document.getElementById("select");
+function(select){
 
+}
+
+let botonSelect = document.getElementsByClassName("select");
 
 botonSelect.addEventListener("click", ()=>{
 
 } );
 
-let mouseOver = document.getElementById("move");
+let mouseOver = document.getElementsByClassName("move");
 
 mouseOver.addEventListener("mouseover",() =>
-  );
+);
