@@ -1,5 +1,5 @@
 const productos = [
-    {id:0, nombre: "Medium Dior Ammi Bag",precio: 3500, imagenUrl:"./media/bags/ammi-adel.avif"},
+    {id:0, nombre: "Medium Dior Ammi Bag",precio: 3500, imagenUrl:"../media/bags/ammi-adel.avif"},
     {id:1, nombre: "Saddle Bag with Strap",precio: 5800, imagenUrl:"../media/bags/bandolera-saddle.jpg.avif"},
     {id:2, nombre: "Large Dior Book Tote",precio: 3000, imagenUrl: "../media/bags/book-tote-grande-adelante.avif"},
     {id:3, nombre: "CD Lounge Bag Blue Dior Oblique Jacquard",precio: 2600, imagenUrl: "../media/bags/cd-lounge-adel.avif"},
@@ -8,9 +8,9 @@ const productos = [
     {id:6, nombre: "Small Dior Key Bag",precio: 4200, imagenUrl: "../media/bags/key-adel.avif"},
 ];
 
-const bagsContainer = document.getElementsById("bagsContainer");
+const bagsContainer = document.getElementById("bagsContainer")
 const carrito = [];
-const carritoContainer = document.getElementsById ("carrito");
+const carritoContainer = document.getElementById ("carrito");
 
 const recorridoProductos = () =>{
     productos.forEach (producto =>{
@@ -29,7 +29,7 @@ const recorridoProductos = () =>{
 
         selectButton.addEventListener("click", ()=>{
             carrito.push (producto);
-            const productoEncontrado = carrito.find (item => item.producto.id === producto.id);
+            const productoEncontrado = carrito.find (producto => producto.id === producto.id);
             if (productoEncontrado){
                 productoEncontrado.cantidad++;
             }else{
