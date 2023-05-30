@@ -17,7 +17,7 @@ const recorridoProductos = () =>{
         const card = document.createElement ("div");
 
         card.innerHTML = `
-        <img id="move" width="100" id=${producto.id} src=${producto.imagenUrl} alt=${producto.nombre}>
+        <img id="move-${producto.id}" width="100" id=${producto.id} src=${producto.imagenUrl} alt=${producto.nombre}>
         <h2>${producto.nombre}</h2>
         <h3>${producto.precio} USD</h3>
         <button id="select-${producto.id}">Select</button>
@@ -33,7 +33,9 @@ const recorridoProductos = () =>{
 
         //agregue las const de cambio de imagen y el evento aca
         const imgChange = document.getElementById("move");
-        imgChange.addEventListener("mouseover",()=>{})
+        imgChange.addEventListener("mouseover",()=>{
+
+        })
     })
 }
 recorridoProductos ();
