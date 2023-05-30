@@ -26,28 +26,37 @@ const recorridoProductos = () =>{
         bagsContainer.append(card);
 
         const selectButton = document.getElementById (`select-${producto.id}`);
-
         selectButton.addEventListener("click", ()=>{
-            carrito.push (producto);
-            const productoEncontrado = carrito.find (producto => producto.id === producto.id);
-            if (productoEncontrado){
-                productoEncontrado.cantidad++;
-            }else{
-                carrito.push({producto: producto, cantidad: 1});
-            }
-            console.log (carrito)
+            agregarAlCarrito(producto.id);
+            recorridoCarrito();
         })
-    } )
+    })
 }
 recorridoProductos ();
 
 const recorridoCarrito = () =>{
+    carritoContainer.innerHTML="";
     carrito.forEach (item =>{
         const carritoFinal = document.createElement("ul");
         carritoFinal.innerHTML = ` 
         <li>${item.nombre},cantidad: ${item.cantidad}, precio: ${item.precio}</li>
         `;
-        carritoContainer.append(recorridoCarrito);
+        carritoContainer.append(carritoFinal);
     } )
+}
+
+const agregarAlCarrito = (productoId) =>{
+    const item = productos.find((producto)=>producto.id === productoId);
+    const productoEnCarrito = carrito.some((item)=> item.id===productoId);
+    console.log(productoEnCarrito);
+
+    if (productoEnCarrito){
+        item.cantidad++;
+        console.log(carrito);
+    }else {
+        item.cantidad = 1;
+        carrito.push(item);
+        console.log(carrito);
+    }
 }
 
