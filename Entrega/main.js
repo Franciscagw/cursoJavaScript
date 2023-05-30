@@ -30,6 +30,10 @@ const recorridoProductos = () =>{
             agregarAlCarrito(producto.id);
             recorridoCarrito();
         })
+
+        //agregue las const de cambio de imagen y el evento aca
+        const imgChange = document.getElementById("move");
+        imgChange.addEventListener("mouseover",()=>{})
     })
 }
 recorridoProductos ();
