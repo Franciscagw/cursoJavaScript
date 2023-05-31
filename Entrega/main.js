@@ -8,8 +8,12 @@ const productos = [
     {id:6, nombre: "Small Dior Key Bag",precio: 4200, imagenUrl: "../media/bags/key-adel.avif",imagenUrlChange: "../media/bags/key-atras.avif"},
 ];
 
+
+
+
 const bagsContainer = document.getElementById("bagsContainer")
 const carrito = [];
+JSON.parse(localStorage.getItem("carrito"));
 const carritoContainer = document.getElementById ("carrito");
 
 const recorridoProductos = () =>{
@@ -67,14 +71,12 @@ const agregarAlCarrito = (productoId) =>{
     }
 }
 
-//esto es lo unico del local storage que habia probado para hacer el localstorage del carrito, y deberia hacer algo con json
-let localsorage = localStorage.setItem("seleccionados", recorridoCarrito);
-console.log(localsorage);
+localStorage.setItem("carrito",JSON.stringify(carrito));
 
 
-// y estos son lo inicios del mouseover, por que con todo lo que probe nunca funciono
+/*// y estos son lo inicios del mouseover, por que con todo lo que probe nunca funciono
 const imgChange = document.getElementById("move");//aca llamo al id de la imagen, pero no se como cambiarlo
 imgChange.addEventListener("mouseover",()=>{
   //y aca deberia usar la funcion que cambie la imagen
-});
+});*///estoy probando un evento nuevo
 
