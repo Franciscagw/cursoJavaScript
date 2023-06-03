@@ -13,7 +13,7 @@ const productos = [
 
 const bagsContainer = document.getElementById("bagsContainer")
 const carrito = [];
-JSON.parse(localStorage.getItem("carrito"));
+JSON.parse(localStorage.getItem("carrito")) || [];
 const carritoContainer = document.getElementById ("carrito");
 
 const recorridoProductos = () =>{
@@ -35,10 +35,12 @@ const recorridoProductos = () =>{
             recorridoCarrito();
         })
 
-        //agregue las const de cambio de imagen y el evento aca
         const imgChange = document.getElementById(`move-${producto.id}`);
         imgChange.addEventListener("mouseover",()=>{
-
+            imgChange.scr = producto.imagenUrlChange;
+        })
+        imgChange.addEventListener("mouseout", ()=>{
+            imgChange.scr = producto.imagenUrl;
         })
     })
 }
@@ -72,11 +74,4 @@ const agregarAlCarrito = (productoId) =>{
 }
 
 localStorage.setItem("carrito",JSON.stringify(carrito));
-
-
-/*// y estos son lo inicios del mouseover, por que con todo lo que probe nunca funciono
-const imgChange = document.getElementById("move");//aca llamo al id de la imagen, pero no se como cambiarlo
-imgChange.addEventListener("mouseover",()=>{
-  //y aca deberia usar la funcion que cambie la imagen
-});*///estoy probando un evento nuevo
 
